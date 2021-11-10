@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "dare": "apps/dare",
+    "dare-e2e": "apps/dare-e2e",
+    "ui-pabau": "libs/ui-pabau",
+    "ui-pabau-e2e": "apps/ui-pabau-e2e"
+  }
+}
