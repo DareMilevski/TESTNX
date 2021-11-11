@@ -6,7 +6,7 @@ import { Navbar } from '@card-app/ui-pabau';
 import { BoxCard } from '@card-app/ui-pabau';
 import { FilterList } from '@card-app/ui-pabau';
 import { DetailList } from '@card-app/ui-pabau';
-import { UiPabau } from '@card-app/ui-pabau';
+import { Button } from '@card-app/ui-pabau';
 
 import { Layout } from 'antd';
 import logo from './img/icon-pabau-blue.png';
@@ -47,18 +47,20 @@ const App = (props) => {
 
   const [data, setData] = useState(getAllMainCategories());
   const [items, setItems] = useState(getSubCategories());
+  const [active, setActive] = useState(true);
+  const handleColor = (e) => {
+    console.log(e);
+    setActive(!active);
+  };
 
   return (
     <div className="App">
       <Navbar name="Steps" title="Navbar from Storybook" />
       <BoxCard setData={setData} defaultItems={defaultItems} />
-      <UiPabau
-        backgroundColor="pink"
-        name="dare"
-        color="red"
-        handleClick={() => {
-          props.handleClick();
-        }}
+      <Button
+        backgroundColor={active ? 'green' : 'black'}
+        color="white"
+        handleColor={handleColor}
       />
       <div className="main">
         <FilterList data={data} setItems={setItems} />

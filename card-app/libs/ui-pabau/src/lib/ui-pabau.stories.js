@@ -1,15 +1,15 @@
-import UiPabau from './ui-pabau';
+import Button from './button/button';
 
 export default {
-  component: UiPabau,
-  title: 'UiPabau',
+  component: Button,
+  title: 'ButtonSubmit',
   argTypes: { handleClick: { action: 'handleClick' } },
 };
 
-const Template = (args) => <UiPabau {...args} />;
+const Template = (args) => <Button {...args} />;
 
 export const PrimaryButton = Template.bind({});
-PrimaryButton.args = {
+Button.args = {
   name: 'dare',
   backgroundColor: 'blue',
   color: 'green',
