@@ -57,11 +57,14 @@ const App = (props) => {
     <div className="App">
       <Navbar name="Steps" title="Navbar from Storybook" />
       <BoxCard setData={setData} defaultItems={defaultItems} />
-      <Button
-        backgroundColor={active ? 'green' : 'black'}
-        color="white"
-        handleColor={handleColor}
-      />
+      <div className="testButton">
+        <Button
+          backgroundColor={active ? 'green' : 'black'}
+          color="white"
+          borderRadius="5px"
+          handleColor={handleColor}
+        />
+      </div>
       <div className="main">
         <FilterList data={data} setItems={setItems} />
         <DetailList items={items} setItems={setItems} />

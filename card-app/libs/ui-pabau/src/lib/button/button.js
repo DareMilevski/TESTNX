@@ -4,11 +4,13 @@ export function Button({
   props,
   backgroundColor = props.backgroundColor,
   color = props.color,
+  borderRadius,
   handleColor,
 }) {
   const style = {
     backgroundColor,
     color,
+    borderRadius,
   };
 
   return (

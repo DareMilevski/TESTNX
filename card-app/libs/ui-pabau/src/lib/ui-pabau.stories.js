@@ -9,15 +9,15 @@ export default {
 const Template = (args) => <Button {...args} />;
 
 export const PrimaryButton = Template.bind({});
-Button.args = {
+PrimaryButton.args = {
   name: 'dare',
-  backgroundColor: 'blue',
-  color: 'green',
+  backgroundColor: 'green',
+  color: 'white',
 };
 
 export const SecondaryButton = Template.bind({});
 SecondaryButton.args = {
-  name: 'darkom',
+  name: 'darko',
   backgroundColor: 'silver',
   color: 'black',
 };
