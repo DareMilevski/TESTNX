@@ -1,7 +1,7 @@
 import './box-card.module.css';
 import { useState } from "react";
 
-export function BoxCard({ setData, defaultItems }) {
+export function BoxCard({ setData, defaultItems,name }) {
   const [active, setActive] = useState(0);
   const categories = [
     {
@@ -35,7 +35,7 @@ export function BoxCard({ setData, defaultItems }) {
           <div>
             <img src={el.icon} alt="img" />
           </div>
-          <p>{el.name}</p>
+          <p>{el.name}{name}</p>
         </div>
       ))}
     </div>

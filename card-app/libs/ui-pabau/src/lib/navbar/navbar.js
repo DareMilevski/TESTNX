@@ -1,13 +1,12 @@
 import './navbar.module.css';
-// import logo from '../../../../../apps/dare/src/app/img/logo.svg';
 
-export function Navbar() {
+export function Navbar(props) {
   return (
     <div className="navbar">
-    <img alt="img" />
+    <img  alt="img" />
     <div>
-      <h2>Navbar from libs</h2>
-      <h4>Step 1/8</h4>
+      <h2>{props.title}</h2>
+      <h4>{props.name}</h4>
     </div>
   </div>
   );

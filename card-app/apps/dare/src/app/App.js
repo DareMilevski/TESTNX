@@ -6,13 +6,14 @@ import { Navbar } from '@card-app/ui-pabau';
 import { BoxCard } from '@card-app/ui-pabau';
 import { FilterList } from '@card-app/ui-pabau';
 import { DetailList } from '@card-app/ui-pabau';
+import { UiPabau } from '@card-app/ui-pabau';
 
 import { Layout } from 'antd';
 import logo from './img/icon-pabau-blue.png';
 
 const { Footer } = Layout;
 
-const App = () => {
+const App = (props) => {
   const getSubCategories = (categories) => {
     let out = [];
     if (categories) {
@@ -49,8 +50,16 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar name="Steps" title="Navbar from Storybook" />
       <BoxCard setData={setData} defaultItems={defaultItems} />
+      <UiPabau
+        backgroundColor="pink"
+        name="dare"
+        color="red"
+        handleClick={() => {
+          props.handleClick();
+        }}
+      />
       <div className="main">
         <FilterList data={data} setItems={setItems} />
         <DetailList items={items} setItems={setItems} />

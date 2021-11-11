@@ -5,7 +5,9 @@ export default {
   title: 'BoxCard',
 };
 
-const Template = (args) => <BoxCard {...args} />;
+const Template = (args) => <BoxCard{...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  name: "ime"
+};
